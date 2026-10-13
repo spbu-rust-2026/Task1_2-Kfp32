@@ -5,7 +5,11 @@ fn main() {
 
     loop {
         let mut s = String::new();
-        io::stdin().read_line(&mut s).unwrap();
+        let n = io::stdin().read_line(&mut s).unwrap();
+
+        if n == 0 {
+            break;
+        }
 
         if s.trim().is_empty() {
             continue;
